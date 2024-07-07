@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Saturday!</title>
+  <style>
+    body {
+      background: #29323c; /* Dark blue background */
+      color: #f0f0f0; /* Light text */
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      overflow: hidden; /* Needed for confetti animation */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      animation: blink 1s infinite alternate; /* Blinking title */
+    }
+
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.5; }
+    }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: hsl(hue-rotate(rand(0, 360)) 100% 50%); /* Random color confetti */
+      animation: fall 2s linear infinite; /* Falling confetti animation */
+    }
+
+    @keyframes fall {
+      0% {
+        top: 0;
+        transform: rotate(0deg);
+      }
+      100% {
+        top: 100vh;
+        transform: rotate(360deg);
+      }
+    }
+
+    .content {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .content h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Saturday!</h1>
+  <div class="confetti">
+    <span class="confetti-piece" style="animation-delay: 0s;"></span>
+    <span class="confetti-piece" style="animation-delay: 0.1s;"></span>
+    </div>
+  <div class="content">
+    <h2>It's Saturday! Time to celebrate!</h2>
+    <p>The weekend is finally here! Time to unwind and enjoy yourself. Explore, relax, or spend time with loved ones. Happy Saturday!</p>
+  </div>
+</body>
+</html>
